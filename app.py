@@ -1,5 +1,7 @@
 from flask import Flask, jsonify
-from core import file_manager, parsers
+
+
+from core import controller
 
 app = Flask(__name__)
 app.config["JSON_SORT_KEYS"] = False
@@ -13,10 +15,13 @@ def index():
 
 @app.route('/batting', methods=['GET'])
 def batting():    
-    data = parsers.clean_reference_files(file_manager.read_csv('reference_batting.csv', header=True))
-    return jsonify(data)
+    return jsonify(controller.get_batting_players())
 
 @app.route('/pitching', methods=['GET'])
 def pitching():    
-    data = parsers.clean_reference_files(file_manager.read_csv('reference_pitching.csv', header=True))
-    return jsonify(data)
+    return jsonify(controller.get_pitching_players())
+
+@app.route('/active_players', methods=['GET'])
+def active_players():
+    data = controller.get_active_players()
+    return jsonify({'batting': {'players': data.get('batting'), 'size': len(data.get('batting'))}, 'pitching': {'players': data.get('pitching'), 'size': len(data.get('pitching'))}})

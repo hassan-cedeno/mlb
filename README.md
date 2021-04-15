@@ -5,6 +5,7 @@ this will be the backend service for it
 
 
 *reference files glossary*
+
 ### Rk -- Rank
     This is a count of the rows from top to bottom.
     It is recalculated following the sorting of a column.
@@ -66,3 +67,38 @@ this will be the backend service for it
     ’*’ indicates 300+ games,
     ’/’ less than 30 games,
     no mark for 30-300.
+
+## Pitching
+
+### W -- Wins
+### L -- Losses
+### W-L% -- Win-Loss Percentage
+### W / (W + L)
+    For players, leaders need one decision for every ten team games.
+    For managers, minimum to qualify for leading is 320 games.
+### ERA -- 9 * ER / IP
+    For recent years, leaders need 1 IP
+    per team game played.
+    Bold indicates lowest ERA using current stats
+    Gold means awarded ERA title at end of year.
+### G
+    ▼ -- Games Played or Pitched
+### GS -- Games Started
+### GF -- Games Finished
+### CG -- Complete Game
+### SHO -- Shutouts
+    No runs allowed and a complete game.
+### SV -- Saves
+### IP -- Innings Pitched
+### H -- Hits/Hits Allowed
+### R -- Runs Scored/Allowed
+### ER -- Earned Runs Allowed
+### HR -- Home Runs Hit/Allowed
+### BB -- Bases on Balls/Walks
+### IBB -- Intentional Bases on Balls
+    First tracked in 1955.
+### SO -- Strikeouts
+### HBP -- Times Hit by a Pitch.
+### BK -- Balks
+### WP -- Wild Pitches
+### BF -- Batters Faced
